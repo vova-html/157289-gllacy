@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <header>
+      <div class="logo">
+        <img src="rrr.png" width="100" height="50" alt="">
+      </div>
+      <nav class="main-menu">
+        <ul>
+          <li>Каталог</li>
+          <li><a href="#">Доставка и оплата</a></li>
+          <li><a href="#">О Компании</a></li>
+        </ul>
+      </nav>
+      <div class="main-btn">
+        <button class="btn-search"></button>
+        <button class="btn-entrance"></button>
+        <button class="btn-basket"></button>
+      </div>
+      <div class="main-info">
+        <span class="info-time">С 10 до 20, ежедневно</span>
+        <span class="info-tel">8 812 450-25-25</span>
+      </div>
+    </header>
+
+    <main>
+      <ul class="catalog-menu">
+        <li class="catalog-menu-item"><a href="#">Главная</a></li>
+        <li class="catalog-menu-item"><a href="#">Каталог</a></li>
+        <li>Сливочное</li>
+      </ul>
+      <h1>Сливочное мороженое</h1>
+
+      <div class="filter">
+        <form action="searh.php" method="post">
+          <fieldset>
+            <div class="filter-line">
+              <label for="sort">Сортировка</label>
+              <select id="sort">
+                <option>по популярности</option>
+                <option>по стоимости</option>
+              </select>
+              <label for="price-min">Цена: 100 руб.</label>
+              <label for="price-max"> - 500 руб.</label>
+              <input id="price-min" type="range" min="1" max="249" step="1" value="50"><input id="price-max" type="range" min="250" max="500" value="450">
+              <label>Жирность:</label>
+              <input id="fatness1" type="radio" name="fat">
+              <label for="fatness1">0%</label>
+              <input id="fatness2" type="radio" name="fat" checked>
+              <label for="fatness2">до 10%</label>
+              <input id="fatness3" type="radio" name="fat">
+              <label for="fatness3">до 30%</label>
+              <input id="fatness4" type="radio" name="fat">
+              <label for="fatness4">выше 30%</label>
+            </div>
+            <div class="filter-line">
+              <label>Наполнители:</label>
+              <input id="choco" type="checkbox" checked>
+              <label for="choco">шоколадные</label>
+              <input id="sugar" type="checkbox" checked>
+              <label for="sugar">сахарные присыпки</label>
+              <input id="fruit" type="checkbox">
+              <label for="fruit">фрукты</label>
+              <input id="syrup" type="checkbox">
+              <label for="syrup">сиропы</label>
+              <input id="jam" type="checkbox">
+              <label for="jam">джемы</label>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+      <section class="catalog">
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">310R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочное с апельсиновым джемом
+            и цитрусовой стружкой
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">380R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочно-клубничное с присыпкой из белого шоколада
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">355R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочно-кофейное с кусочками шоколада
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">415R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочное крем-брюле с карамельной подливкой
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">325R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочное с брусничным джемом
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">410R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочно-черничное с цельными ягодами черники
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">375R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочно-лимонное с карамельной присыпкой
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">320R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочное с шоколадной стружкой
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">440R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочно-ванильное с кусочками шоколада
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">435R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочное с ментоловым сиропом
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">355R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочное с кусочками черного шоколада
+          </a>
+        </div>
+
+        <div class="catalog-item">
+          <img src="rrr.png" width="150" height="150" alt="">
+          <span class="catalog-price">420R</span>/кг
+          <a class="catalog-name" href="">
+            Сливочное с мятным сиропом
+          </a>
+        </div>
+      </section>
+
+      <ul class="paginator">
+        <li class="paginator-item">&lsaquo;</li>
+        <li class="paginator-item">1</li>
+        <li class="paginator-item"><a href="#">2</a></li>
+        <li class="paginator-item"><a href="#">3</a></li>
+        <li class="paginator-item"><a href="#">4</a></li>
+        <li class="paginator-item"><a href="#">5</a></li>
+        <li class="paginator-item"><a href="#">&rsaquo;</a></li>
+      </ul>
+
+    </main>
+
+    <footer class="main-footer">
+      <div class="container">
+        <section class="footer-social">
+          <a class="social-tw" href="#">Твиттер</a>
+          <a class="social-ig" href="#">Инстаграм</a>
+          <a class="social-fb" href="#">Фейсбук</a>
+          <a class="social-vk" href="#">Вконтакте</a>
+        </section>
+        <section class="footer-about">
+          <a class="footer-about-item">Для поставщиков</a>
+          <a class="footer-about-item">О производстве</a>
+          <a class="footer-about-item">Наши документы</a>
+          <a class="footer-about-item">Экологические стандарты</a>
+        </section>
+        <section class="copyright">
+          <img class="copyright-logo" src="logo.png" width="100" height="20" alt="">
+          Сделано в <a class="copyright-href" href="https://htmlacademy.ru">HTML Academy</a> &copy; 2016
+        </section>
+      </div>
+    </footer>
+
+  </body>
+</html>
