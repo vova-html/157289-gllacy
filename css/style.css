@@ -1,40 +1,192 @@
-p {
-  text-align: center;
-}
-.mentor {
-  position: relative;
-  width: 544px;
-  margin: auto;
-  text-align: center;
-  //border: 1px solid red;
-  padding-top: 55px;
-  padding-bottom: 80px;
-  background: url("http://1.bp.blogspot.com/-scsIVH2NNQ8/UIw8zl_eeMI/AAAAAAAAAKA/fwmxSlhiDpY/s1600/f605f3e91453.png") no-repeat;
-  background-size: 135px auto;
-  background-position: 205px 0;
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: #cccccc;
 }
 
-.mentor img {
-  //opacity: 0.7;
+.wrapper {
+  min-width: 1000px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  background: url("../img/bg_main_1.png") top center no-repeat;
+  border: 1px solid white;
 }
 
-.mentor::before, .mentor::after {
+.logo {
+  display: block;
+  float: left;
+}
+
+.sub-layout {
   position: absolute;
-  bottom: 30px;
-  font-size: 24pt;
-  background-color: #99CCFF;
-  padding: 5px 15px;
-  border-radius: 5px;
+  padding-top: 10px;
+  border: 1px solid #fff;
 }
 
-.mentor::before {
-  content: 'Сергей';
-  transform: rotate(15deg);
-  left: 100px;
+.sub-menu{
+  padding: 10px;
+  line-height: 30px;
+
+  font-size: 14px;
+  background-color: #eee;
 }
 
-.mentor::after {
-  content: 'Попов';
-  transform: rotate(-15deg);
-  right: 100px;
+.sub-menu-item{
+  display: block;
+}
+
+.btn {
+  padding: 10px 30px;
+
+  text-decoration: none;
+  color: #fff;
+  background-color: red;
+  border-radius: 20px;
+}
+
+.main-menu {
+  display: inline-block;
+  margin: 0 0;
+  padding: 20px 0;
+}
+
+.main-menu-item {
+  display: inline-block;
+  margin-left: 15px;
+
+  border: 1px solid #fff;
+}
+
+.main-menu-buttons {
+  position: relative;
+  float: right;
+  padding: 20px 0;
+}
+
+.main-menu-btn {
+  margin-left: 5px;
+  padding: 5px;
+
+  font-size: 12px;
+  background-color: #ddd;
+  text-decoration: none;
+}
+
+.main-menu-layout {
+  position: absolute;
+  right: 0;
+  padding-top: 10px;
+  border: 1px solid #fff;
+}
+
+.main-menu-container {
+  padding: 10px;
+  background-color: #bbb;
+}
+
+.main-menu-field {
+  border:1px solid #eee;
+  border-radius: 10px;
+  margin: 5px 0;
+  padding: 0 10px;
+}
+
+.main-menu-entrance {
+  margin-top: 5px;
+  border: 1px solid #fff; height: 35px;
+}
+
+.main-menu-login {
+  display: inline-block; width: 100px; height: 35px;
+  font-size: 20px; line-height: 35px;
+  text-decoration: none; text-align: center;
+  color: #fff; border-radius: 20px;
+  background-color: red;
+  vertical-align: top;
+}
+
+.main-menu-help {
+  display: inline-block;
+}
+
+.main-menu-sign {
+  vertical-align: middle;
+  font-size: 10px;
+}
+
+.main-menu-order {
+  width: 400px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 10px;
+}
+
+.order-item {
+  //height: 50px;
+}
+
+.order-item-price {
+  width: 100px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.order-item-sum {
+  width: 80px;
+  text-align: center;
+  vertical-align: top;
+}
+
+.order-btn {
+  text-align: right;
+}
+
+.slider-title {
+  padding-top: 330px;
+  text-align: center;
+
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.slider-navigation {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.slider-control {
+  float: left;
+  width: 150px;
+  line-height: 30px;
+
+  font-size: 0;
+  text-align: left;
+  background-color: #ddd;
+}
+
+.slider-control-item {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+
+  vertical-align: middle;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.slider-control-active {
+  background-color: #fff;
+}
+
+.slider-btn {
+  margin-left: -150px;
+
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 25px;
 }
