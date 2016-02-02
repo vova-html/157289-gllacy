@@ -292,6 +292,66 @@ a:hover {
   font-weight: bold;
 }
 
+.filter-line {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #fff;
+  background-color: #ccc;
+}
+
+.filter-item {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px solid red;
+}
+
+.price-slider {
+}
+
+.price-bar {
+  position: relative;
+  width: 200px;
+  margin-top: 15px;
+  border: 2px solid #fff;
+}
+
+.price-bar::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  width: 8px;
+  border: 2px solid blue;
+}
+
+.price-bar::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 88px;
+  border: 2px solid blue;
+}
+
+.bar-min {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.bar-max {
+  position: absolute;
+  top: -10px;
+  right: 90px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
 .action {
   position: relative;
   min-height: 140px;
@@ -543,12 +603,45 @@ margin-right: 165px;
   font-weight: bold;
 }
 
+.paginator {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: #ccc;
+}
+
+.paginator-item {
+  float: left;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.paginator-active {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.paginator-nav {
+  font-size: 30px;
+}
+
 .main-footer {
-  padding-top: 20px;
-  min-height: 80px;
+  min-height: 100px;
   font-size: 13px;
   color: #ffffff;
 }
+
+.main-footer .wrapper {
+  padding-top: 20px;
+  border-top: 1px solid #a9bbb1;
+}
+
 .footer-social {
   float: left;
   width: 195px;
