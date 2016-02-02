@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <input id="slide1" type="radio" name="slider" checked>
+    <input id="slide2" type="radio" name="slider">
+    <input id="slide3" type="radio" name="slider">
     <div class="page-wrapper">
       <div class="wrapper">
         <header>
@@ -104,31 +107,31 @@
         </header>
 
         <div class="slider">
-          <div class="slide">
+          <div class="slide slide-1">
             <div class="slide-title">
               Крем-брюле и пломбир с малиновым джемом
             </div>
             <a class="slide-btn btn" href="#">Давайте оба!</a>
           </div>
 
-          <div class="slide">
+          <div class="slide slide-2">
             <div class="slide-title">
-              Крем-брюле и пломбир с малиновым джемом
+              Шоколадный пломбир и лимонный сорбет
             </div>
             <a class="slide-btn btn" href="#">Давайте оба!</a>
           </div>
 
-          <div class="slide">
+          <div class="slide slide-3">
             <div class="slide-title">
-              Крем-брюле и пломбир с малиновым джемом
+              Пломбир с помадкой и клубничный щербет
             </div>
             <a class="slide-btn btn" href="#">Давайте оба!</a>
           </div>
 
           <div class="slider-controls">
-            <a class="slide-control" href=""></a>
-            <a class="slide-control" href=""></a>
-            <a class="slide-control" href=""></a>
+            <label class="slide-control circle" for="slide1"></label>
+            <label class="slide-control circle" for="slide2"></label>
+            <label class="slide-control circle" for="slide3"></label>
           </div>
         </div>
 
@@ -155,10 +158,10 @@
           </div>
         </div>
 
-        <div class="row row-inline">
+        <div class="row row-inline row-indent">
           <div class="col-1">
             <div class="catalog-item">
-              <div class="catalog-item-info  item-hit">
+              <div class="catalog-item-info item-hit">
                 <img class="item-img circle" src="img/item01.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
                   <span>310R</span>/кг
@@ -176,7 +179,7 @@
           </div>
           <div class="col-1">
             <div class="catalog-item">
-              <div class="catalog-item-info">
+              <div class="catalog-item-info item-hit">
                 <img class="item-img circle" src="img/item02.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
                   <span>310R</span>/кг
@@ -185,6 +188,11 @@
               <a class="catalog-item-name" href="">
                 Сливочно-кофейное с кусочками шоколада
               </a>
+              <div class="catalog-item-view">
+                <a class="btn" href="">
+                  Быстрый просмотр
+                </a>
+              </div>
             </div>
           </div>
           <div class="col-1">
@@ -246,7 +254,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row row-indent">
           <div class="col-2">
             <div class="additional add-news round">
               <p class="additional-text">Новое в нашем блоге</p>
