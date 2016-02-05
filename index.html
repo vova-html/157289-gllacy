@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -20,11 +21,11 @@
             <nav class="main-menu">
               <ul class="main-menu-list">
                 <li class="main-menu-item">
-                  <a href="#">Каталог</a>
+                  <a href="">Каталог</a>
                   <div class="sub-layout">
                     <ul class="sub-menu">
                       <li class="sub-menu-item"><a href="#">Новинки </a></li>
-                      <li class="sub-menu-item"><a href="#">Сливочное</a></li>
+                      <li class="sub-menu-item"><a href="catalog.html">Сливочное</a></li>
                       <li class="sub-menu-item"><a href="#">Щербеты</a></li>
                       <li class="sub-menu-item"><a href="#">Фруктовый лед</a></li>
                       <li class="sub-menu-item"><a href="#">Мелорин</a></li>
@@ -49,55 +50,60 @@
               </ul>
             </nav>
 
-            <div class="right-menu">
-              <ul class="right-menu-list">
-                <li class="right-menu-btn">
-                  <a href="#"><img src="img/scan.png" width="17" height="17" alt=""></a>
-                  <div class="right-menu-layout">
-                    <div class="right-menu-container">
-                      <input class="right-menu-field" type="text" placeholder="Что ищем?">
-                    </div>
+            <ul class="right-menu">
+              <li class="right-menu-item">
+                <a class="right-menu-btn menu-icon-only menu-icon-scan" href="#">Поиск</a>
+                <div class="right-menu-layout">
+                  <div class="right-menu-container">
+                    <input class="right-menu-field" type="text" placeholder="Что ищем?">
                   </div>
-                </li>
-                <li class="right-menu-btn">
-                  <a href="#"><img src="img/login.png" width="21" height="19" alt="">Вход</a>
-                  <div class="right-menu-layout">
-                    <div class="right-menu-container">
-                      <input class="right-menu-field" type="email" placeholder="Электронная почта">
-                      <input class="right-menu-field" type="password" placeholder="Пароль">
-                      <div class="right-menu-entrance">
-                        <a class="right-menu-login" href="#">Войти</a>
-                        <div class="right-menu-help">
-                          <a class="right-menu-sign" href="#">Забыли пароль?</a><br>
-                          <a class="right-menu-sign" href="#">Новая регистрация</a>
-                        </div>
+                </div>
+              </li>
+              <li class="right-menu-item">
+                <a class="right-menu-btn menu-icon menu-icon-login" href="#">Вход</a>
+                <div class="right-menu-layout">
+                  <div class="right-menu-container">
+                    <input class="right-menu-field" type="email" placeholder="Электронная почта">
+                    <input class="right-menu-field" type="password" placeholder="Пароль">
+                    <div class="right-menu-entrance">
+                      <a class="right-menu-login btn" href="#">Войти</a>
+                      <div class="right-menu-help">
+                        <a class="right-menu-sign" href="#">Забыли пароль?</a>
+                        <a class="right-menu-sign" href="#">Новая регистрация</a>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li class="right-menu-btn">
-                  <a href="#"><img src="img/buy.png"  width="21" height="20" alt="">Пусто</a>
-                  <div class="right-menu-layout">
-                    <div class="right-menu-container">
-                      <div class="order-item">
-                        <a href=""><img src="img/undo.png" width="11" height="11" alt=""></a>
-                        <img src="img/bskt-item1.jpg" alt="" width="33" heigh="33">
-                        <span class="order-item-name">Пломбир с апельсиновым джемом</span>
-                        <span class="order-item-price">1,5 кг х 200 руб.</span>
-                        <span class="order-item-sum">300 руб.</span>
-                      </div>
-                      <div class="order-item">
-                        <a href=""><img src="img/undo.png" width="11" height="11" alt=""></a>
-                        <img src="img/bskt-item2.jpg" alt="" width="33" heigh="33">
-                        <span class="order-item-name">Клубничный пломбир с присыпкой из белого шоколада</span>
-                        <span class="order-item-price">1,5 кг х 200 руб.</span>
-                        <span class="order-item-sum">300 руб.</span>
-                      </div>
-                      <a class="order-btn btn" href="">Оформить заказ</a>
+                </div>
+              </li>
+              <li class="right-menu-item">
+                <a class="right-menu-btn menu-icon menu-icon-buy" href="#">
+                  <span class="right-menu-empty">Пусто</span>
+                  <span class="right-menu-goods">2 товара</span>
+                </a>
+                <div class="right-menu-layout">
+                  <div class="right-menu-container">
+                    <div class="order-row">
+                      <a class="order-item order-undo" href=""><img src="img/undo.png" width="11" height="11" alt=""></a>
+                      <img class="order-item order-icon circle" src="img/bskt-item1.jpg" alt="" width="33" heigh="33">
+                      <span class="order-item order-name">Пломбир с апельсиновым джемом</span>
+                      <span class="order-item order-price">1,5 кг х 200 руб.</span>
+                      <span class="order-item order-sum">300 руб.</span>
                     </div>
+                    <div class="order-row">
+                      <a class="order-item order-undo" href=""><img src="img/undo.png" width="11" height="11" alt=""></a>
+                      <img class="order-item order-icon circle" src="img/bskt-item2.jpg" alt="" width="33" heigh="33">
+                      <span class="order-item order-name">Клубничный пломбир с присыпкой из белого шоколада</span>
+                      <span class="order-item order-price">1,5 кг х 200 руб.</span>
+                      <span class="order-item order-sum">300 руб.</span>
+                    </div>
+                    <div class="order-total">
+                      Итого: 750 руб.
+                    </div>
+                    <a class="order-btn btn" href="">Оформить заказ</a>
                   </div>
-                </li>
-            </div>
+                </div>
+              </li>
+            </ul>
           </div>
 
           <div class="main-info">
@@ -135,7 +141,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="action-row row">
           <div class="col-2">
             <div class="action action-one round">
               <h2 class="action-name">Малинка даром!</h2>
@@ -158,7 +164,7 @@
           </div>
         </div>
 
-        <div class="row row-inline row-indent">
+        <div class="catalog-row row row-inline">
           <div class="col-1">
             <div class="catalog-item">
               <div class="catalog-item-info item-hit">
@@ -197,7 +203,7 @@
           </div>
           <div class="col-1">
             <div class="catalog-item">
-              <div class="catalog-item-info">
+              <div class="catalog-item-info item-hit">
                 <img class="item-img circle" src="img/item03.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
                   <span>310R</span>/кг
@@ -206,11 +212,16 @@
               <a class="catalog-item-name" href="">
                 Сливочно-клубничное с присыпкой из белого шоколада
               </a>
+              <div class="catalog-item-view">
+                <a class="btn" href="">
+                  Быстрый просмотр
+                </a>
+              </div>
             </div>
           </div>
           <div class="col-1">
             <div class="catalog-item">
-              <div class="catalog-item-info">
+              <div class="catalog-item-info item-hit">
                 <img class="item-img circle" src="img/item04.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
                   <span>310R</span>/кг
@@ -219,46 +230,57 @@
               <a class="catalog-item-name" href="">
                 Сливочное крем-брюле с карамельной подливкой
               </a>
+              <div class="catalog-item-view">
+                <a class="btn" href="">
+                  Быстрый просмотр
+                </a>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="about round">
-          <h1 class="about-main">
-            Магазин Глейси - это онлайн и офлайн магазин по продаже
-            мороженого собственного производства на развес
-          </h1>
-          <div class="row">
-            <div class="col-2">
-              <p class="about-item icon-ice">
+        <div class="row row-inline">
+          <ul class="about round">
+            <h1 class="about-main">
+              Магазин Глейси - это онлайн и офлайн магазин по продаже
+              мороженого собственного производства на развес
+            </h1>
+            <li class="col-2">
+              <p class="about-text icon-ice">
                 Все наше мороженое изготавливается на собственном производстве,
                 с использованием современного оборудования и проверенных временем технологий.
               </p>
-              <p class="about-item icon-leaf">
+            </li>
+            <li class="col-2">
+              <p class="about-text icon-cow">
+                Закупка ингредиентов  производится только у проверенных фермерских
+                хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
+              </p>
+            </li>
+            <li class="col-2">
+              <p class="about-text icon-leaf">
                 Для приготовления мороженого используются настоящие сливки и молоко
                 высочайшего качества. Все дополнительные ингредиенты и добавки
                 произведены из натурального, экологически чистого сырья.
               </p>
-            </div>
-            <div class="col-2">
-              <p class="about-item icon-cow">
-                Закупка ингредиентов  производится только у проверенных фермерских
-                хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.
-              </p>
-              <p class="about-item icon-keep">
+            </li>
+            <li class="col-2">
+              <p class="about-text icon-keep">
                 Доставка нашего мороженого до заказчиков осуществляется в
                 специальном термопаке, которая не дает мороженому растаять в пути
                 и позволяет ему сохранить свой превосходный вкус.
               </p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
 
-        <div class="row row-indent">
+        <div class="additional-row row">
           <div class="col-2">
             <div class="additional add-news round">
               <p class="additional-text">Новое в нашем блоге</p>
-              <a class="additional-recipes" href="#">10 способов сервировки<br>фруктовых щербетов<br>к столу</a>
+              <div  class="additional-style">
+                <a class="additional-recipes" href="#">10 способов сервировки фруктовых щербетов к&nbsp;столу</a>
+              </div>
             </div>
           </div>
 
@@ -287,6 +309,7 @@
 
       <div class="map">
         <div class="wrapper">
+          <img class="pin" src="img/pin.png" width="218" height="142" alt="">
           <div class="map-info round">
             <div class="map-info-block">
               <p class="map-info-item">
