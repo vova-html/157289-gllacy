@@ -274,7 +274,7 @@
           </ul>
         </div>
 
-        <div class="additional-row row">
+        <div class="additional-row row row-flex">
           <div class="col-2">
             <div class="additional add-news round">
               <p class="additional-text">Новое в нашем блоге</p>
@@ -326,7 +326,7 @@
                 (с 10 до 20 ежедневно)
               </p>
             </div>
-            <a class="map-info-btn btn" href="#">Форма обратной связи</a>
+            <a class="map-info-btn btn">Форма обратной связи</a>
           </div>
         </div>
       </div>
@@ -363,21 +363,19 @@
     </div>
 
     <div class="modal">
-      <div class="feedback">
-        <div class="feedback-title">
-          Мы обязательно вам ответим!
-        </div>
-        <div class="feedback-close">
-          <img src="img/feedback_close.png" width="18" height="17" alt="">
-          <form action="feedback.php" method="post">
-            <input class="feedback-field" type="text" placeholder="Как вас зовут?">
-            <input class="feedback-field" type="email" placeholder="Ваша почта для ответа?">
-            <textarea class="feedback-field" placeholder="Напишите что-нибудь..."></textarea>
-            <input class="btn" type="submit" value="Отправить">
-          </form>
-        </div>
+      <div class="feedback round">
+        <img src="img/feedback_close.png" width="18" height="17" alt="">
+        <div class="feedback-title">Мы обязательно вам ответим!</div>
+        <form action="feedback.php" method="post">
+          <input class="feedback-field" type="text" placeholder="Как вас зовут?">
+          <input class="feedback-field" type="email" placeholder="Ваша почта для ответа?">
+          <textarea class="feedback-field text-field" placeholder="Напишите что-нибудь..."></textarea>
+          <div class="text-right"><input class="btn" type="submit" value="Отправить"></div>
+        </form>
       </div>
     </div>
+
+    <script src="js/script.js"></script>
 
   </body>
 </html>

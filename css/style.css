@@ -14,6 +14,10 @@ body {
   border-radius: 15px;
 }
 
+.text-right {
+  text-align: right;
+}
+
 a {
   text-decoration: none;
 }
@@ -174,6 +178,16 @@ a {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
+}
+
+/* сетка flex для блока новостей и подписки */
+.row.row-flex {
+  display: flex;
+}
+
+.row.row-flex [class^=col-] {
+  float: none;
+  display: flex;
 }
 
 .col-1{
@@ -407,6 +421,7 @@ a {
   display: none;
   right: 0;
   padding-top: 5px;
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.5);
 }
 
 .right-menu-container {
@@ -425,7 +440,7 @@ a {
   padding: 7px 10px;
   font-size: 14px;
   line-height: 22px;
-  border: 2px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 5px;
   outline: none;
   color: #000000;
@@ -754,12 +769,24 @@ a {
 }
 
 .additional.add-news {
-  min-height: 148px;
+  width: 100%;
+  min-height: 170px;
   padding: 25px 20px;
+  background-image: url("../img/bg_news.jpg");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .additional.add-post {
   padding: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  background-image: url("../img/bg_post.jpg");
+}
+
+.row-flex .add-post {
+  display: flex;
 }
 
 .additional-content {
@@ -815,19 +842,6 @@ a {
 margin-right: 165px;
 }
 
-
-.add-news {
-  background-image: url("../img/bg_news.jpg");
-  background-position: right center;
-  background-repeat: no-repeat;
-}
-
-.add-post {
-  font-size: 16px;
-  line-height: 22px;
-  background-image: url("../img/bg_post.jpg");
-}
-
 .map {
   min-height: 430px;
   background-image: url("../img/map.jpg");
@@ -871,6 +885,10 @@ margin-right: 165px;
   display: block;
   font-size: 18px;
   font-weight: bold;
+}
+
+.map-info-btn {
+  cursor: pointer;
 }
 
 .paginator {
@@ -955,7 +973,6 @@ margin-right: 165px;
   margin-right: 210px;   /* 195px + 5px (отступ) + 10px (в макете не по центру) */
   padding-top: 10px;
   text-align: center;
-  //outline: 1px solid;
 }
 
 .footer-about-col {
@@ -963,7 +980,6 @@ margin-right: 165px;
   text-align: left;
   vertical-align: top;
   font-size: 0;
-  //outline: 1px solid;
 }
 
 .footer-about-item {
@@ -1004,5 +1020,67 @@ margin-right: 165px;
 }
 
 .modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   display: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal.active {
+  display: block;
+}
+
+.feedback {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  background-color: #f8f7f4;
+  transform: translate(-50%, -50%);
+}
+
+.feedback img {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.feedback img:hover {
+  background-color: rgba(235, 235, 235, 1);
+  transition: background-color 0.2s;
+}
+
+.feedback-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 500;
+  color: #343434;
+}
+
+.feedback-field {
+  display: block;
+  width: 262px;
+  margin-bottom: 20px;
+  padding: 7px 10px;
+  font-size: 14px;
+  line-height: 22px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  color: #000000;
+  background-color: #ffffff;
+}
+.feedback-field.text-field {
+  width: 425px;
+  min-height: 150px;
 }
