@@ -97,105 +97,101 @@
           </div>
 
           <div class="main-info">
+            <ul class="catalog-menu">
+              <li class="catalog-menu-item"><a href="#">Главная</a></li>
+              <li class="catalog-menu-item"><a href="#">Каталог</a></li>
+              <li class="catalog-menu-item">Сливочное</li>
+            </ul>
             <div class="info-time">С 10 до 20, ежедневно</div>
             <div class="info-tel">8 812 450-25-25</div>
           </div>
 
-          <ul class="catalog-menu">
-            <li class="catalog-menu-item"><a href="#">Главная</a></li>
-            <li class="catalog-menu-item"><a href="#">Каталог</a></li>
-            <li>Сливочное</li>
-          </ul>
         </header>
 
-        <h1>Сливочное мороженое</h1>
+        <h1 class="page-title">Сливочное мороженое</h1>
 
-        <div class="filter">
+        <div class="filter">                               <!-- фильтр -->
           <form action="searh.php" method="post">
             <fieldset>
-              <div class="filter-line">
 
-                <div class="filter-item">
-                  <div><label for="sort">Сортировка</label></div>
-                  <div>
-                    <select id="sort">
-                      <option>по популярности</option>
-                      <option>по стоимости</option>
-                    </select>
-                  </div>
+              <div class="filter-item">
+                <div class="filter-title">
+                  Сортировка:
                 </div>
+                <div class="filter-layer sort-layer">
+                  <select id="sort">
+                    <option>по популярности</option>
+                    <option>сначала недорогие</option>
+                    <option>по стоимости</option>
+                  </select>
+                </div>
+              </div>
 
-                <div class="filter-item">
-                  <div>
-                    Цена:
-                    <input id="price-min" type="number" min="0" max="1000" value="100">
-                    руб.
-                    -
-                    <input id="price-max" type="number" min="0" max="1000" value="500">
-                    руб.
-                  </div>
-                  <div class="price-slider">
-                    <div class="price-controls">
-                      <div class="price-scale">
-                        <div class="price-bar">
-                        </div>
-                      </div>
-                      <div class="bar-min"></div>
-                      <div class="bar-max"></div>
+              <div class="filter-item">
+                <div class="filter-title">
+                  Цена:
+                  <input id="price-min" type="number" min="0" max="1000" value="100">
+                  руб.
+                  &ndash;
+                  <input id="price-max" type="number" min="0" max="1000" value="500">
+                  руб.
+                </div>
+                <div class="filter-layer price-controls">
+                  <div class="price-scale">
+                    <div class="price-bar">
                     </div>
                   </div>
+                  <div class="bar-min"></div>
+                  <div class="bar-max"></div>
                 </div>
-
-                <div class="filter-item">
-                  <div><label>Жирность:</label></div>
-                  <div>
-                    <input id="fatness1" type="radio" name="fat">
-                    <label for="fatness1">0%</label>
-                    <input id="fatness2" type="radio" name="fat" checked>
-                    <label for="fatness2">до 10%</label>
-                    <input id="fatness3" type="radio" name="fat">
-                    <label for="fatness3">до 30%</label>
-                    <input id="fatness4" type="radio" name="fat">
-                    <label for="fatness4">выше 30%</label>
-                  </div>
-                </div>
-
               </div>
 
-              <div class="filter-line">
-
-                <div class="filter-item">
-                  <div><label>Наполнители:</label></div>
-                  <div>
-                    <input id="choco" type="checkbox" checked>
-                    <label for="choco">шоколадные</label>
-                    <input id="sugar" type="checkbox" checked>
-                    <label for="sugar">сахарные присыпки</label>
-                    <input id="fruit" type="checkbox">
-                    <label for="fruit">фрукты</label>
-                    <input id="syrup" type="checkbox">
-                    <label for="syrup">сиропы</label>
-                    <input id="jam" type="checkbox">
-                    <label for="jam">джемы</label>
-                  </div>
+              <div class="filter-item">
+                <div class="filter-title">Жирность:</div>
+                <div class="filter-layer">
+                  <input id="fatness1" type="radio" name="fat">
+                  <label for="fatness1">0%</label>
+                  <input id="fatness2" type="radio" name="fat" checked>
+                  <label for="fatness2">до 10%</label>
+                  <input id="fatness3" type="radio" name="fat">
+                  <label for="fatness3">до 30%</label>
+                  <input id="fatness4" type="radio" name="fat">
+                  <label for="fatness4">выше 30%</label>
                 </div>
-
-                <div class="filter-item">
-                  <div><a class="btn" href="#">Применить</a></div>
-                </div>
-
               </div>
+
+              <div class="filter-item">
+                <div class="filter-title">Наполнители:</div>
+                <div class="filter-layer">
+                  <input id="choco" type="checkbox" checked>
+                  <label for="choco">шоколадные</label>
+                  <input id="sugar" type="checkbox" checked>
+                  <label for="sugar">сахарные присыпки</label>
+                  <input id="fruit" type="checkbox">
+                  <label for="fruit">фрукты</label>
+                  <input id="syrup" type="checkbox">
+                  <label for="syrup">сиропы</label>
+                  <input id="jam" type="checkbox">
+                  <label for="jam">джемы</label>
+                </div>
+              </div>
+
+              <div class="filter-item">
+                <div class="filter-title">&nbsp;</div>
+                <button class="filter-layer filter-btn" href="#">Применить</button>
+              </div>
+
             </fieldset>
           </form>
         </div>
 
-        <div class="row row-inline row-indent">
+        <div class="row row-inline row-indent">            <!-- каталог -->
           <div class="col-1">
             <div class="catalog-item">
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item01.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>310R</span>/кг
+                  <span class="item-price-value">310₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -214,7 +210,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item02.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>380R</span>/кг
+                  <span class="item-price-value">380₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -233,7 +229,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item03.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>355R</span>/кг
+                  <span class="item-price-value">355₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -252,7 +248,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item04.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>415R</span>/кг
+                  <span class="item-price-value">415₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -271,11 +267,11 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item05.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>325R</span>/кг
+                  <span class="item-price-value">325₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
-                Сливочное с брусничным джемом
+                Сливочное с брусничным <br> джемом
               </a>
               <div class="catalog-item-view">
                 <a class="btn" href="">
@@ -290,7 +286,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item06.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>410R</span>/кг
+                  <span class="item-price-value">410₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -309,7 +305,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item07.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>375R</span>/кг
+                  <span class="item-price-value">375₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -328,7 +324,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item08.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>320R</span>/кг
+                  <span class="item-price-value">320₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -347,11 +343,11 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item09.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>440R</span>/кг
+                  <span class="item-price-value">440₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
-                Сливочно-ванильное с кусочками шоколада
+                Сливочно-ванильное с кусочками&nbsp;шоколада
               </a>
               <div class="catalog-item-view">
                 <a class="btn" href="">
@@ -366,7 +362,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item10.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>435R</span>/кг
+                  <span class="item-price-value">435₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -385,7 +381,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item11.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>355R</span>/кг
+                  <span class="item-price-value">355₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -404,7 +400,7 @@
               <div class="catalog-item-info">
                 <img class="item-img circle" src="img/item12.jpg" width="267" height="267" alt="">
                 <div class="catalog-item-price">
-                  <span>420R</span>/кг
+                  <span class="item-price-value">420₽</span>/кг
                 </div>
               </div>
               <a class="catalog-item-name" href="">
@@ -421,13 +417,13 @@
         </div>
 
         <ul class="paginator">
-          <li class="paginator-item"><a class="paginator-nav" href="#">&lsaquo;</a></li>
+          <li class="paginator-item paginator-prev"></li>
           <li class="paginator-item paginator-active">1</li>
-          <li class="paginator-item"><a class="paginator-page" href="#">2</a></li>
-          <li class="paginator-item"><a class="paginator-page" href="#">3</a></li>
-          <li class="paginator-item"><a class="paginator-page" href="#">4</a></li>
-          <li class="paginator-item"><a class="paginator-page" href="#">5</a></li>
-          <li class="paginator-item"><a class="paginator-nav" href="#">&rsaquo;</a></li>
+          <li class="paginator-item"><a href="#">2</a></li>
+          <li class="paginator-item"><a href="#">3</a></li>
+          <li class="paginator-item"><a href="#">4</a></li>
+          <li class="paginator-item"><a href="#">5</a></li>
+          <li class="paginator-item paginator-next"><a href="#"></a></li>
         </ul>
 
       </div>
