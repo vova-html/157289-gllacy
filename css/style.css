@@ -22,6 +22,11 @@ a {
   text-decoration: none;
 }
 
+.catalog-menu-item a:hover,
+.main-footer a:hover {
+  color: red;
+}
+
 /* проверка переполнения (вкл на 3-ем слайде) */
 span.add-text::before,
 span.add-text::after {
@@ -60,7 +65,9 @@ span.add-text::after {
   background-color: #849d8f;
   background-position: top center;
   background-repeat: no-repeat;
+}
 
+.page-wrapper.main {
       -webkit-transition: background-color 0.3s ease-out,
                           background-image 0.3s linear;
          -moz-transition: background-color 0.3s ease-out,
@@ -69,6 +76,18 @@ span.add-text::after {
                           background-image 0.3s linear;
               transition: background-color 0.3s ease-out,
                           background-image 0.3s linear;
+}
+
+.page-wrapper.slide1 {
+  background-color: #849d8f;
+}
+
+.page-wrapper.slide2 {
+  background-color: #8996a6;
+}
+
+.page-wrapper.slide3 {
+  background-color: #9d8b84;
 }
 
 #slide1,
@@ -99,13 +118,13 @@ span.add-text::after {
 
 .slider {
   position: relative;
-  margin-top: 236px;
+  margin-top: 244px;
 }
 
 .slider-controls {
   position: absolute;
   left: 0;
-  bottom: 57px;
+  bottom: 59px;
 }
 
 .slide-control {
@@ -124,7 +143,7 @@ span.add-text::after {
 .slide {
   display: none;
   padding-top: 30px;
-  padding-bottom: 46px;
+  padding-bottom: 41px;
   text-align: center;
 }
 
@@ -156,17 +175,14 @@ span.add-text::after {
   background-color: #ffffff;
 }
 
-.wrapper {
-  min-width: 860px;
-  max-width: 1146px;
+.content-wrapper {
+  min-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
-@media (min-width: 1200px) {
-  .wrapper {
-    padding: 0 27px;
-  }
+.wrapper {
+  padding: 0 2.22%;
 }
 
 .clearfix::after {
@@ -177,8 +193,8 @@ span.add-text::after {
 
 /* modul grid */
 .row {
-  margin-right: -10px;
-  margin-left: -10px;
+  margin-right: -1.1%;
+  margin-left: -1.1%;
 }
 
 .row::before,
@@ -202,14 +218,15 @@ span.add-text::after {
 
 .row [class^=col-] {
   float: left;
-  padding: 0 8px;
-  box-sizing: border-box;
   min-height: 1px;
+  padding: 0 1.1%;
+  box-sizing: border-box;
 }
 
 .row.row-inline [class^=col-] {
   float: none;
   display: inline-block;
+  padding: 0 8px;
   vertical-align: top;
   font-size: 14px;
 }
@@ -240,16 +257,6 @@ span.add-text::after {
   width: 100%;
 }
 
-@media (min-width: 1200px) {
-  .row {
-    margin-right: -13px;
-    margin-left: -13px;
-  }
-  .row [class^=col-] {
-    _padding: 0 13px;
-  }
-}
-
 /* end modul grid */
 
 .header-top {
@@ -262,7 +269,9 @@ span.add-text::after {
 
 .logo {
   float: left;
-  width: 169px;
+  width: 163px;
+  height: 64px;
+  transform: translateX(-6px);
 }
 
 .main-menu {
@@ -283,18 +292,18 @@ span.add-text::after {
 
 .main-menu-item {
   float: left;
-  //margin-right: 25px;
   margin-left: 15px;
-  margin-right: 15px;
+  margin-right: 13px;
   padding-top: 7px;
-  border-bottom: 1px solid #b9c8bf;
+  border-bottom: 1px solid #cccccc;
+  border-bottom-color: rgba(255,255,255, 0.5);
 }
 
 .main-menu-item.current {
   margin-left: 0;
   margin-right: 0;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 13px;
   padding-bottom: 7px;
   border-bottom-style: none;
   border-radius: 17px;
@@ -305,7 +314,7 @@ span.add-text::after {
   margin-left: 0;
   margin-right: 0;
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 13px;
   padding-bottom: 7px;
   border-bottom-style: none;
   border-radius: 17px;
@@ -394,7 +403,7 @@ span.add-text::after {
   float: right;
   width: 280px;
   padding-left: 0;
-  margin-top: 15px;
+  margin-top: 13px;
   text-align: right;
   font-size: 0;
 }
@@ -610,22 +619,23 @@ span.add-text::after {
 
 .main-info {
   text-align: right;
-  font-size: 14px;
 }
 
 .info-time {
-  line-height: 17px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 16px;
 }
 
 .info-tel {
   font-size: 22px;
   font-weight: bold;
-  line-height: 26px;
+  line-height: 28px;
 }
 
 .catalog-menu {
   float: left;
-  margin-top: 21px;
+  margin-top: 25px;
   padding: 0;
   list-style: none;
   font-size: 0;
@@ -651,8 +661,8 @@ span.add-text::after {
 
 .page-title {
   margin: 0;
-  margin-top: 2px;
-  margin-bottom: 24px;
+  margin-top: 4px;
+  margin-bottom: 25px;
   font-size: 35px;
   line-height: 35px;
 }
@@ -674,10 +684,11 @@ span.add-text::after {
   font-size: 16px;
   color: inherit;
   background-color: transparent;
+  outline: 0;
 }
 
 .filter option {
-  background-color: #90a79a; color: inherit;
+  color: #000000;
 }
 
 .filter input[type="radio"],
@@ -764,7 +775,7 @@ span.add-text::after {
 
 .filter-item {
   display: inline-block;
-  margin-right: 12px;
+  margin-right: 14px;
   margin-bottom: 12px;
   vertical-align: top;
   color: #f8f7f4;
@@ -859,14 +870,14 @@ span.add-text::after {
 .action {
   position: relative;
   min-height: 140px;
-  padding: 20px;
+  padding: 15px 20px;
   padding-bottom: 70px;
   font-size: 18px;
   color: #ffffff;
 }
 
 .action-row {
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 .action-name {
@@ -875,9 +886,13 @@ span.add-text::after {
   font-size: 35px;
 }
 
+.action-info {
+  margin: 15px 0;
+}
+
 .action-btn {
   position: absolute;
-  right: 20px;
+  right: 23px;
   bottom: 20px;
 }
 
@@ -909,7 +924,6 @@ span.add-text::after {
 }
 
 .catalog-item-info.item-hit::before {
-  z-index: 10;
   content: "";
   position: absolute;
   top: 0;
@@ -919,30 +933,21 @@ span.add-text::after {
   background: url("../img/hit.png") center center no-repeat transparent;
 }
 
-.catalog-item:hover {
-  _background-color: rgba(255,255,255, 0.3);
-  _overflow-y: hidden;
-  _box-shadow: 0 20px 20px 0px rgba(0, 0, 0, 0.4),
-      0 20px 0 -20px rgba(0, 0, 0, 0.4);
-}
-
 .catalog-item:hover .catalog-item-name {
   border: 0;
 }
 
 .catalog-item:hover .catalog-item-view {
   display: block;
-  _box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.6);
 }
 
 .catalog-item .item-img {
-  z-index: 10;
   width: 100%;
   height: auto;
 }
 
 .catalog-item:hover::before {
-  z-index: 2;
+  z-index: 1;
   content: "";
   position: absolute;
   top: 0;
@@ -975,7 +980,7 @@ span.add-text::after {
 }
 
 .catalog-item-view {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   top: inherit;
   left: 0;
@@ -984,8 +989,6 @@ span.add-text::after {
   padding: 20px 0;
   display: none;
   text-align: center;
-  _border-radius: 0 0 15px 15px;
-  _background-color: rgba(255,255,255, 0.3);
 }
 
 .catalog-item-btn {
@@ -997,6 +1000,7 @@ span.add-text::after {
 }
 
 .catalog-item-name {
+  z-index: 4;
   text-decoration: none;
   font-size: 16px;
   font-weight: 400;
@@ -1037,10 +1041,10 @@ span.add-text::after {
 }
 
 .about-text {
-  margin-top: 6px;
+  margin-top: 8px;
   margin-bottom: 0;
-  padding-top: 15px;
-  padding-left: 55px;
+  padding-top: 14px;
+  padding-left: 57px;
   font-size: 16px;
   line-height: 22px;
   color: #000000;
@@ -1076,8 +1080,8 @@ span.add-text::after {
 
 .additional.add-news {
   width: 100%;
-  min-height: 170px;
-  padding: 25px 20px;
+  min-height: 172px;
+  padding: 23px 20px;
   background-image: url("../img/bg_news.jpg");
   background-position: right center;
   background-repeat: no-repeat;
@@ -1096,13 +1100,19 @@ span.add-text::after {
 }
 
 .additional-content {
-  padding: 25px 20px;
+  position: relative;
+  padding-top: 28px;
+  padding-left: 21px;
   background-color: #f8f7f4;
 }
 
 .additional-text {
   margin: 0;
-  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.add-post .additional-text {
+  margin-bottom: 65px;
 }
 
 .additional-style {
@@ -1111,22 +1121,28 @@ span.add-text::after {
 
 .additional-recipes {
   text-decoration: none;
-  border-bottom: 2px solid #000000;
   font-size: 24px;
   font-weight: bold;
+  line-height: 30px;
   color: #000000;
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+.additional-recipes span {
+  border-bottom: 2px solid #000000;
+}
+
 .additional-form {
-  margin-top: 0;
-  margin-bottom: 10px;
+  position: absolute;
+  left: 22px;
+  right: 20px;
+  bottom: 34px;
 }
 
 .additional-email {
   width: 100%;
   height: 43px;
-  padding: 1px 10px;
+  padding: 0 10px;
   border: 1px solid #d3d3d2;
   border-radius: 6px;
   outline-style: none;
@@ -1144,11 +1160,11 @@ span.add-text::after {
 }
 
 .field-wrap {
-margin-right: 165px;
+  margin-right: 163px;
 }
 
 .map {
-  min-height: 429px;
+  position: relative;
   background-image: url("../img/map.jpg");
   background-position: center top;
   background-size: cover;
@@ -1156,17 +1172,18 @@ margin-right: 165px;
 
 .map .wrapper {
   position: relative;
-  min-height: inherit;
+  min-height: 429px;
 }
 
 .pin {
-  margin-left: 16%;
-  margin-top: 210px;
+  position: absolute;
+  left: 25%;
+  top: 25%;
 }
 
 .map-info {
   position: absolute;
-  top: 50%;
+  top: 65px;
   right: 2.3%;
   width: 250px;
   padding: 30px 25px;
@@ -1174,10 +1191,10 @@ margin-right: 165px;
   color: #000000;
   background-color: #ffffff;
 
-  -webkit-transform: translateY(-50%);
+  /*-webkit-transform: translateY(-50%);
      -moz-transform: translateY(-50%);
        -o-transform: translateY(-50%);
-          transform: translateY(-50%);
+          transform: translateY(-50%);*/
 }
 
 .map-info-block {
@@ -1215,8 +1232,13 @@ margin-right: 165px;
   margin-top: 48px;
   margin-bottom: 38px;
   padding: 0;
-  font-size: 0px;
   text-align: right;
+  font-size: 0px;
+  color: #ffffff;
+}
+
+.paginator li {
+  display: inline;
 }
 
 .paginator-item {
@@ -1226,43 +1248,45 @@ margin-right: 165px;
   margin-left: 1px;
   padding: 3px 0;
   text-align: center;
+  text-decoration: none;
   vertical-align: top;
   border-radius: 50%;
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
   list-style: none;
-}
-
-.paginator-item:not(.paginator-active):not(.paginator-prev):not(.paginator-next):hover {
-  background-color: rgba(255,255,255, 0.2);
-}
-
-.paginator-item a {
-  text-decoration: none;
   color: #ffffff;
 }
 
-.paginator-prev,
-.paginator-next {
+.pg-prev,
+.pg-next {
   width: 22px;
   text-decoration: none;
+  border-radius: 3px;
   background-repeat: no-repeat;
 }
 
-.paginator-prev {
+.pg-prev {
   background-image: url("../img/pg_prev.png");
   background-position: left center;
+  pointer-events: none;
+  cursor: default;
 }
 
-.paginator-next {
+.pg-next {
   background-image: url("../img/pg_next.png");
   background-position: right center;
 }
 
-.paginator-active {
+.pg-active {
   color: #000000;
   background-color: #ffffff;
+  pointer-events: none;
+  cursor: default;
+}
+
+.paginator-item:not(.pg-active):hover {
+  background-color: rgba(255,255,255, 0.2);
 }
 
 .main-footer {

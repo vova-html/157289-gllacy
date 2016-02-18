@@ -1,28 +1,61 @@
 
-var infoButton = document.querySelector(".map-info-btn");
-infoButton.addEventListener("click", function() {
-  var modal = document.querySelector(".modal");
-  modal.classList.add("active");
-}, false);
+var modal = document.querySelector(".modal");
 
-function closeFeed() {
-  var modal = document.querySelector(".modal");
-  modal.classList.remove("active");
+if (modal) {
+  var infoButton = document.querySelector(".map-info-btn");
+  var feedBlock = modal.querySelector(".feedback");
+  var btnClose = feedBlock.querySelector("img");
+
+  function openFeed(e) {
+    e.preventDefault();
+    modal.classList.add("active");
+
+    modal.addEventListener("click", closeFeed);
+    btnClose.addEventListener("click", closeFeed);
+    document.addEventListener('keydown', closeKeydown);
+  }
+
+  function closeFeed(e) {
+    e.preventDefault();
+    modal.classList.remove("active");
+
+    modal.removeEventListener("click", closeFeed);
+    btnClose.removeEventListener("click", closeFeed);
+    document.removeEventListener('keydown', closeKeydown);
+  }
+
+  function closeKeydown(e) {
+    if (e.which == 27) {
+      closeFeed(e);
+  	}
+  }
+
+  infoButton.addEventListener("click", openFeed);
+
+  feedBlock.addEventListener("click", function(e) {
+    e.stopPropagation();
+  }, false);
+
+  if (window.localStorage) {
+    var array = document.querySelectorAll("input[name='slider']");
+    for (var i = 0; i < array.length; i++) {
+      array[i].addEventListener("change", function() {
+        localStorage.setItem("gllacyBackground", this.value);
+      }, false);
+      if (array[i].checked) {
+        localStorage.setItem("gllacyBackground", array[i].value);
+      }
+    }
+  }
+
 }
 
-var closeSelector = document.querySelector(".feedback img");
-closeSelector.addEventListener("click", closeFeed, true);
-
-var closeSelector = document.querySelector(".modal");
-closeSelector.addEventListener("click", closeFeed, false);
-
-var feedBlock = document.querySelector(".feedback");
-feedBlock.addEventListener("click", function(e) {
-  e.stopPropagation();
-}, false);
-
-document.addEventListener('keydown', function(e) {
-	if (e.which == 27) {
-    closeFeed();
-	}
-});
+if (window.localStorage) {
+  elemPW = document.querySelector(".page-wrapper.secondary");
+  if (elemPW) {
+    className = localStorage.getItem("gllacyBackground");
+    if (className) {
+      elemPW.classList.add(className);
+    }
+  }
+}
