@@ -24,24 +24,26 @@ a {
 
 .catalog-menu-item a:hover,
 .main-footer a:not(.social-btn):hover {
-  color: #F9B89A;
-  border-bottom: 2px solid;
+  color: #FFBC9E;
+  border-bottom: 1px solid rgba(255,188,158, 0.3);
 }
 
 .catalog-menu-item a:active,
 .main-footer a:not(.social-btn):active {
-  border-bottom: 1px solid;
+  color: #FFBC9E;
+  border-bottom: 1px solid rgba(255,188,158, 0.3);
 }
 
 .right-menu-help a:hover,
 .additional-style a:hover span {
-  color: #EF5843;
-  border-bottom: 2px solid;
+  color: #EC593C;
+  border-bottom-color: rgba(236,89,60, 0.3);
 }
 
 .right-menu-help a:active,
 .additional-style a:active span {
-  border-bottom: 1px solid;
+  color: #EC593C;
+  border-bottom-color: rgba(236,89,60, 0.3);
 }
 
 /* проверка переполнения (вкл на 3-ем слайде) */
@@ -261,7 +263,7 @@ span.add-text::after {
 .row.row-inline [class^=col-] {
   float: none;
   display: inline-block;
-  padding: 0 8px;
+  padding: 0 0.67%;
   vertical-align: top;
   font-size: 14px;
 }
@@ -402,14 +404,6 @@ span.add-text::after {
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
-.sub-menu hr {
-  height: 1px;
-  margin: 0 5px;
-  border: 0;
-  background-color: rgba(0,0,0, 0.2);
-
-}
-
 .sub-menu-item {
   font-weight: normal;
 }
@@ -418,6 +412,14 @@ span.add-text::after {
 .sub-menu-item a {
   display: block;
   padding: 5px 20px;
+}
+
+.sub-menu-item:first-child::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 0 5px;
+  background-color: rgba(0,0,0, 0.2);
 }
 
 .sub-menu-item:first-child a {
@@ -431,11 +433,11 @@ span.add-text::after {
   margin: 4px 0;
 }
 
-.sub-menu-item:hover {
+.sub-menu-item a:hover {
   background-color: #fbded8;
 }
 
-.sub-menu-item:active {
+.sub-menu-item a:active {
   background-color: #f6b5a5;
 }
 
@@ -855,7 +857,7 @@ span.add-text::after {
 
 .filter-item {
   display: inline-block;
-  margin-right: 14px;
+  margin-right: 12px;
   margin-bottom: 12px;
   vertical-align: top;
   color: #f8f7f4;
@@ -1000,19 +1002,6 @@ span.add-text::after {
   padding: 5px;
   padding-bottom: 0px;
   text-align: center;
-  _border-radius: 15px 15px 0 0;
-}
-
-.catalog-item-info.item-hit::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 61px;
-  height: 61px;
-  background-image: url("../img/sprite.png");
-  background-position: -170px -5px;
-  background-repeat: no-repeat;
 }
 
 .catalog-item:hover .catalog-item-name {
@@ -1036,6 +1025,8 @@ span.add-text::after {
   left: 0;
   width: 100%;
   height: 100%;
+  margin: -5px;
+  padding: 5px;
   padding-bottom: 75px;
   border-radius: 5px;
   background-color: rgba(255,255,255, 0.3);
@@ -1044,8 +1035,20 @@ span.add-text::after {
 
 .catalog-item-info {
   position: relative;
-  min-height: 267px;
+  /*min-height: 267px;*/
   margin-bottom: 10px;
+}
+
+.catalog-item-info.item-hit::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 61px;
+  height: 61px;
+  background-image: url("../img/sprite.png");
+  background-position: -170px -5px;
+  background-repeat: no-repeat;
 }
 
 .catalog-item-price {
@@ -1176,6 +1179,7 @@ span.add-text::after {
   width: 100%;
   min-height: 172px;
   padding: 23px 20px;
+  font-weight: 700;
   background-color: #ffffff;
   background-image: url("../img/bg_news.jpg");
   background-position: right center;
@@ -1209,7 +1213,6 @@ span.add-text::after {
 .additional-text {
   margin: 0;
   margin-bottom: 5px;
-  font-weight: bold;
 }
 
 .add-post .additional-text {
@@ -1278,13 +1281,17 @@ span.add-text::after {
 
 .map {
   position: relative;
-  background-color: #F7F1D9;
-  background-image: url("../img/map.jpg");
-  background-position: center top;
-  background-size: cover;
+  background-color: #E9E5DC;
   min-height: 429px;
 }
 
+.map .map-google {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
 .map .wrapper {
   position: relative;
 }

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
 
@@ -29,7 +29,6 @@
                     <div class="sub-layout">
                       <ul class="sub-menu">
                         <li class="sub-menu-item"><a href="#">Новинки </a></li>
-                        <hr>
                         <li class="sub-menu-item"><a href="catalog.html">Сливочное</a></li>
                         <li class="sub-menu-item"><a href="#">Щербеты</a></li>
                         <li class="sub-menu-item"><a href="#">Фруктовый лед</a></li>
@@ -80,14 +79,14 @@
                     <div class="right-menu-container">
                       <div class="order-row">
                         <a class="order-item order-undo" href=""><img src="img/undo.png" width="11" height="11" alt=""></a>
-                        <img class="order-item order-icon circle" src="img/bskt-item1.jpg" alt="" width="33" heigh="33">
+                        <img class="order-item order-icon circle" src="img/bskt-item1.jpg" alt="" width="33" height="33">
                         <span class="order-item order-name">Пломбир с апельсиновым джемом</span>
                         <span class="order-item order-price">1,5 кг х 200 руб.</span>
                         <span class="order-item order-sum">300 руб.</span>
                       </div>
                       <div class="order-row">
                         <a class="order-item order-undo" href=""><img src="img/undo.png" width="11" height="11" alt=""></a>
-                        <img class="order-item order-icon circle" src="img/bskt-item2.jpg" alt="" width="33" heigh="33">
+                        <img class="order-item order-icon circle" src="img/bskt-item2.jpg" alt="" width="33" height="33">
                         <span class="order-item order-name">Клубничный пломбир с присыпкой из белого шоколада</span>
                         <span class="order-item order-price">1,5 кг х 200 руб.</span>
                         <span class="order-item order-sum">300 руб.</span>
@@ -290,7 +289,7 @@
                   <p class="additional-text">
                     Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
                     всего самого вкусного, что у нас происходит. Обещаем не спамить
-                    и&nbspне слать всякой не нужной ерунды. Честно =)
+                    и&nbsp;не слать всякой не нужной ерунды. Честно =)
                     <span class="add-text"></span>
                   </p>
                   <div class="additional-form">
@@ -309,8 +308,8 @@
         </div>
       </div>
 
-      <div class="map" id="map-canvas">
-        <img class="pin" src="img/pin.png" width="218" height="142" alt="">
+      <div class="map">
+        <div class="map-google" id="map-canvas"></div>
         <div class="content-wrapper">
           <div class="wrapper">
             <div class="map-info round">
@@ -387,7 +386,7 @@
     </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 
   </body>
 </html>

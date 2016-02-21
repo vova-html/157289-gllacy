@@ -25,7 +25,6 @@
                     <div class="sub-layout">
                       <ul class="sub-menu">
                         <li class="sub-menu-item"><a href="#">Новинки </a></li>
-                        <hr>
                         <li class="sub-menu-item current"><span>Сливочное</span></li>
                         <li class="sub-menu-item"><a href="#">Щербеты</a></li>
                         <li class="sub-menu-item"><a href="#">Фруктовый лед</a></li>
@@ -76,14 +75,14 @@
                     <div class="right-menu-container">
                       <div class="order-row">
                         <a class="order-item order-undo" href=""><img src="img/undo.png" width="11" height="11" alt=""></a>
-                        <img class="order-item order-icon circle" src="img/bskt-item1.jpg" alt="" width="33" heigh="33">
+                        <img class="order-item order-icon circle" src="img/bskt-item1.jpg" alt="" width="33" height="33">
                         <span class="order-item order-name">Пломбир с апельсиновым джемом</span>
                         <span class="order-item order-price">1,5 кг х 200 руб.</span>
                         <span class="order-item order-sum">300 руб.</span>
                       </div>
                       <div class="order-row">
                         <a class="order-item order-undo" href=""><img src="img/undo.png" width="11" height="11" alt=""></a>
-                        <img class="order-item order-icon circle" src="img/bskt-item2.jpg" alt="" width="33" heigh="33">
+                        <img class="order-item order-icon circle" src="img/bskt-item2.jpg" alt="" width="33" height="33">
                         <span class="order-item order-name">Клубничный пломбир с присыпкой из белого шоколада</span>
                         <span class="order-item order-price">1,5 кг х 200 руб.</span>
                         <span class="order-item order-sum">300 руб.</span>
@@ -111,7 +110,7 @@
 
           <h1 class="page-title">Сливочное мороженое</h1>
 
-          <div class="filter">                               <!-- фильтр -->
+          <div class="filter">                              <!-- фильтр -->
             <form action="searh.php" method="post">
 
               <div class="filter-item">
@@ -130,10 +129,10 @@
               <div class="filter-item">
                 <div class="filter-title">
                   Цена:
-                  <input id="price-min" type="text" min="0" max="1000" value="100">
+                  <input id="price-min" type="text" value="100">
                   руб.
                   &ndash;
-                  <input id="price-max" type="text" min="0" max="1000" value="500">
+                  <input id="price-max" type="text" value="500">
                   руб.
                 </div>
                 <div class="filter-layer price-controls">
@@ -178,13 +177,13 @@
 
               <div class="filter-item">
                 <div class="filter-title">&nbsp;</div>
-                <button class="filter-layer filter-btn" href="#">Применить</button>
+                <button class="filter-layer filter-btn" type="submit">Применить</button>
               </div>
 
             </form>
           </div>
 
-          <div class="row row-inline">            <!-- каталог -->
+          <div class="row row-inline">                      <!-- каталог -->
             <div class="col-1">
               <div class="catalog-item">
                 <div class="catalog-item-info">
@@ -213,7 +212,7 @@
                   </div>
                 </div>
                 <a class="catalog-item-name" href="#">
-                  Сливочно-клубничное с присыпкой из белого шоколада
+                  Сливочно-кофейное с кусочками шоколада
                 </a>
                 <div class="catalog-item-view">
                   <a class="btn" href="">
@@ -232,7 +231,7 @@
                   </div>
                 </div>
                 <a class="catalog-item-name" href="#">
-                  Сливочно-кофейное с кусочками шоколада
+                  Сливочно-клубничное с присыпкой из белого шоколада
                 </a>
                 <div class="catalog-item-view">
                   <a class="btn" href="">
@@ -416,7 +415,7 @@
           </div>
 
           <ul class="paginator">
-            <li><span class="paginator-item pg-prev"></sapn></li>
+            <li><span class="paginator-item pg-prev"></span></li>
             <li><a class="paginator-item pg-active" href="#">1</a></li>
             <li><a class="paginator-item" href="#">2</a></li>
             <li><a class="paginator-item" href="#">3</a></li>
@@ -452,8 +451,9 @@
                 </div>
               </div>
             </div>
-        </footer>
+          </footer>
 
+        </div>
       </div>
     </div>
 
