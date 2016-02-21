@@ -3,8 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -50,7 +51,7 @@
                   <a class="right-menu-btn menu-icon-only menu-icon-scan" href="#">Поиск</a>
                   <div class="right-menu-layout">
                     <div class="right-menu-container">
-                      <input class="right-menu-field" type="text" placeholder="Что ищем?">
+                      <input class="right-menu-field search" type="text" placeholder="Что ищем?">
                     </div>
                   </div>
                 </li>
@@ -136,7 +137,7 @@
             </div>
           </div>
 
-          <div class="action-row row">
+          <div class="action-row row row-flex">
             <div class="col-2">
               <div class="action action-one round">
                 <h2 class="action-name">Малинка даром!</h2>
@@ -153,6 +154,7 @@
                 <p class="action-info">
                   При покупке 2 кг пломбира, добавим в ваш заказ упаковку
                   вкуснейшей шоколадной присыпки совершенно бесплатно.
+                  <span class="add-text"></span>
                 </p>
                 <a class="action-btn btn" href="">Хочу шоколадки!</a>
               </div>
@@ -288,7 +290,7 @@
                   <p class="additional-text">
                     Подпишитесь на нашу сладкую рассылку и будете всегда в курсе
                     всего самого вкусного, что у нас происходит. Обещаем не спамить
-                    и не слать всякой не нужной ерунды. Честно =)
+                    и&nbspне слать всякой не нужной ерунды. Честно =)
                     <span class="add-text"></span>
                   </p>
                   <div class="additional-form">
@@ -307,7 +309,7 @@
         </div>
       </div>
 
-      <div class="map">
+      <div class="map" id="map-canvas">
         <img class="pin" src="img/pin.png" width="218" height="142" alt="">
         <div class="content-wrapper">
           <div class="wrapper">
@@ -374,14 +376,18 @@
         <div class="feedback-title">Мы обязательно вам ответим!</div>
         <form action="feedback.php" method="post">
           <input class="feedback-field" type="text" placeholder="Как вас зовут?">
+          <label data-title="Как вас зовут?"></label>
           <input class="feedback-field" type="email" placeholder="Ваша почта для ответа?">
+          <label data-title="Ваша почта для ответа?"></label>
           <textarea class="feedback-field text-field" placeholder="Напишите что-нибудь..."></textarea>
+          <label data-title="Напишите что-нибудь..."></label>
           <div class="text-right"><input class="feedback-btn btn" type="submit" value="Отправить"></div>
         </form>
       </div>
     </div>
 
-    <script src="js/script1.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/script.js"></script>
 
   </body>
 </html>

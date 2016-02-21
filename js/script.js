@@ -51,7 +51,7 @@ if (modal) {
 }
 
 if (window.localStorage) {
-  elemPW = document.querySelector(".page-wrapper.secondary");
+  elemPW = document.querySelector(".page-wrapper.inner");
   if (elemPW) {
     className = localStorage.getItem("gllacyBackground");
     if (className) {
@@ -59,3 +59,25 @@ if (window.localStorage) {
     }
   }
 }
+
+// карта
+
+function initMap() {
+	var mapOption = {
+  	zoom: 15,
+    scrollwheel: false,
+    center: new google.maps.LatLng(59.9387969,30.3208946)
+  }
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOption);
+  var image = "img/pin.png";
+  var myLatLng = new google.maps.LatLng(59.9387969,30.3208946);
+  var beachMarker = new google.maps.Marker({
+  	position: myLatLng,
+    map: map,
+    icon: image
+  });
+}
+
+google.maps.event.addDomListener(window, "load", initMap);
+
+//initMap();
