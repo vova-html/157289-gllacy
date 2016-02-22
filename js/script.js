@@ -4,7 +4,7 @@ var modal = document.querySelector(".modal");
 if (modal) {
   var infoButton = document.querySelector(".map-info-btn");
   var feedBlock = modal.querySelector(".feedback");
-  var btnClose = feedBlock.querySelector("img");
+  var btnClose = feedBlock.querySelector(".feedback-close");
 
   function openFeed(e) {
     e.preventDefault();

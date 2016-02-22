@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   </head>
 
@@ -46,7 +46,9 @@
                   <a class="right-menu-btn menu-icon-only menu-icon-scan" href="#">Поиск</a>
                   <div class="right-menu-layout">
                     <div class="right-menu-container">
-                      <input class="right-menu-field search" type="text" placeholder="Что ищем?">
+                      <form action="/search.php" method="post">
+                        <input class="right-menu-field search" type="text" placeholder="Что ищем?">
+                      </form>
                     </div>
                   </div>
                 </li>
@@ -54,8 +56,10 @@
                   <a class="right-menu-btn menu-icon menu-icon-login" href="#">Вход</a>
                   <div class="right-menu-layout">
                     <div class="right-menu-container">
-                      <input class="right-menu-field" type="email" placeholder="Электронная почта">
-                      <input class="right-menu-field" type="password" placeholder="Пароль">
+                      <form action="/login.php" method="post">
+                        <input class="right-menu-field" type="email" placeholder="Электронная почта">
+                        <input class="right-menu-field" type="password" placeholder="Пароль">
+                      </form>
                       <div class="right-menu-entrance">
                         <a class="right-menu-login btn" href="#">Войти</a>
                         <div class="right-menu-help">
@@ -152,9 +156,9 @@
                   <label for="fatness1">0%</label>
                   <input id="fatness2" type="radio" name="fat" checked>
                   <label for="fatness2">до 10%</label>
-                  <input id="fatness3" type="radio" name="fat">
+                  <input id="fatness3" type="radio" name="fat" disabled checked>
                   <label for="fatness3">до 30%</label>
-                  <input id="fatness4" type="radio" name="fat">
+                  <input id="fatness4" type="radio" name="fat" disabled>
                   <label for="fatness4">выше 30%</label>
                 </div>
               </div>
@@ -166,9 +170,9 @@
                   <label for="choco">шоколадные</label>
                   <input id="sugar" type="checkbox" checked>
                   <label for="sugar">сахарные присыпки</label>
-                  <input id="fruit" type="checkbox">
+                  <input id="fruit" type="checkbox" disabled>
                   <label for="fruit">фрукты</label>
-                  <input id="syrup" type="checkbox">
+                  <input id="syrup" type="checkbox" disabled checked>
                   <label for="syrup">сиропы</label>
                   <input id="jam" type="checkbox">
                   <label for="jam">джемы</label>
